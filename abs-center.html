@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>JS Bin</title>
+</head>
+<style>
+html {
+        margin: 0px;
+        padding: 0px;
+    }
+    
+    #a {
+        position: relative;
+        background-color: red;
+        height: 150px;
+        width: 150px;
+    }
+    
+    #aa {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 50%;
+        height: 30%;
+        margin: -15% 0 0 -25%;
+        background-color: blue;
+    }
+    
+    #b {
+        position: relative;
+        background-color: red;
+        height: 150px;
+        width: 150px;
+    }
+    
+    #bb {
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+        background-color: blue;
+    }
+    
+    #c {
+        background-color: red;
+        width: 350px;
+        height: 350px;
+        display: table-cell;
+        vertical-align: middle;
+        text-align: center;
+        /*行内元素只能利用text-align让行内元素居中*/
+        border: 1px solid;
+    }
+    
+    #cc {
+        display: inline-block;
+        background-color: blue;
+        width: 150px;
+        height: 150px;
+        line-height: 150px;
+    }
+    
+    #d {
+        background-color: red;
+        width: 350px;
+        height: 350px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    #dd {
+        background-color: blue;
+        width: 150px;
+        text-align: center;
+        line-height: 150px;
+    }
+}
+</style>
+
+<body>
+
+    <div id="a">
+        <p id="aa">居中</p>
+    </div>
+    <br>
+    <div id="b">
+        <p id="bb">居中</p>
+    </div>
+    <br>
+    <sapn id="c">
+        <span id="cc">行内元素居中</sapn>
+  </span>
+        <br>
+        <div id="d"><span id="dd">flex居中</span id="cc"></div id="cc">
+
+
+
+</html>

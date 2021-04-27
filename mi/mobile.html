@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="mobile.css">
+    <link rel="stylesheet" href="css\iconfont.css">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        /* 对主体进行设置 */
+        
+        html {
+            font-size: calc(10000vw / 500);
+        }
+        
+        body {
+            font-size: 12px;
+            background-color: #f2f2f2;
+            position: relative;
+        }
+        
+        header {
+            position: fixed;
+            z-index: 10;
+            background-color: #f2f2f2;
+        }
+        
+        main {
+            position: absolute;
+            top: calc(170rem/100);
+        }
+        /* 顶栏广告 */
+        
+        #adimg {
+            width: calc(500rem/100);
+            height: calc(70rem/100);
+        }
+        
+        #adimg img {
+            width: 100%;
+            height: 100%;
+        }
+        /* 顶栏搜索栏 */
+        
+        .row1 {
+            height: calc(60rem/100);
+            display: flex;
+            position: relative;
+        }
+        
+        .row1 div:not(:nth-child(2)) {
+            width: calc(70rem/100);
+        }
+        
+        .row1 div:nth-child(1) img {
+            display: block;
+            width: calc(36rem/100);
+            height: calc(22rem/100);
+            margin: calc(19rem/100) calc(17rem/100);
+        }
+        
+        .row1 div:nth-child(2) {
+            flex-grow: 1;
+            height: calc(42rem/100);
+            border: 1px solid grey;
+            box-sizing: border-box;
+            vertical-align: middle;
+            background-color: #fff;
+            line-height: calc(42rem/100);
+            margin-top: calc(9rem/100);
+        }
+        
+        .row1 div:nth-child(2) span {
+            display: inline-block;
+            height: calc(42rem/100);
+            width: calc(42rem/100);
+            line-height: calc(42rem/100);
+            text-align: center;
+        }
+        
+        .row1 div:nth-child(2) p {
+            display: inline-block;
+            color: rgba(0, 0, 0, .3);
+            font-size: .22rem;
+        }
+        
+        .row1 div:nth-child(3) i {
+            position: absolute;
+            top: 33%;
+            right: 4%;
+        }
+        /* 顶栏目录栏 */
+        
+        .row2 {
+            height: calc(40rem/100);
+            display: flex;
+        }
+        
+        .row2 ul {
+            display: flex;
+            list-style: none;
+            height: 100%;
+        }
+        
+        .row2 ul li {
+            float: left;
+            font-size: .18rem;
+            padding: 0 .18rem;
+            white-space: nowrap;
+            line-height: .40rem;
+            color: #999;
+        }
+        
+        .row2 ul li:nth-of-type(1) span {
+            display: inline-block;
+            border-bottom: 2px solid rgba(237, 91, 0);
+            height: calc(100% - 2px);
+        }
+        /* 轮播图图片 */
+        
+        #img img {
+            width: 100%;
+            height: calc(250rem/100);
+        }
+        /* 中部十个目录 */
+        
+        .middle ul {
+            height: calc(210rem/100);
+            list-style: none;
+        }
+        
+        .middle ul li {
+            float: left;
+            height: calc(105rem/100);
+            width: calc(100rem/100);
+        }
+        
+        .middle ul li img {
+            height: calc(105rem/100);
+            width: calc(100rem/100);
+        }
+        /* 三个照片 */
+        
+        .img3 {
+            margin: calc(10rem/100) 0;
+            height: calc(350rem/100);
+            width: calc(500rem/100);
+            position: relative;
+        }
+        
+        .img3 img {
+            height: calc(350rem/100);
+            width: calc(249rem/100);
+            position: absolute;
+        }
+        
+        .img3 img:not(:nth-child(1)) {
+            height: calc(175rem/100);
+            width: calc(249rem/100);
+        }
+        
+        .img3 img:nth-child(1) {
+            left: 0;
+            top: 0;
+        }
+        
+        .img3 img:nth-child(2) {
+            right: 0;
+            top: 0;
+        }
+        
+        .img3 img:nth-child(3) {
+            right: 0;
+            bottom: 0;
+        }
+        /* 下方四个菜单 */
+        
+        .footer {
+            width: 100%;
+            height: calc(53rem/100);
+            display: flex;
+            justify-content: space-between;
+            background-color: #fff;
+            position: fixed;
+            bottom: 0;
+        }
+        
+        .footer a {
+            display: inline-block;
+            width: calc(120rem/100);
+            height: 100%;
+            position: relative;
+            text-align: center;
+            color: #999;
+        }
+        
+        .footer a span {
+            position: absolute;
+            bottom: 0;
+            left: 38%;
+            color: #999;
+            font-size: .18rem;
+        }
+    </style>
+</head>
+<!-- 这是一个注释模板 -->
+
+<body>
+    <header>
+        <!-- 头部广告 -->
+        <div id="adimg"><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/6d413c53c65eca6c6b6ba826ea4e3ff6.png" alt=""></div>
+        <!-- 顶栏 -->
+        <div class="headbox">
+            <!-- 顶栏搜索行-->
+            <div class="row1">
+                <div><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEwAAAAyCAYAAAD2vz2aAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyhpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTM4IDc5LjE1OTgyNCwgMjAxNi8wOS8xNC0wMTowOTowMSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTcgKE1hY2ludG9zaCkiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6MjQ2OUE2MkU0RTQ4MTFFNzgxOTZBRDJFQjk4Qjk0NjQiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6MjQ2OUE2MkY0RTQ4MTFFNzgxOTZBRDJFQjk4Qjk0NjQiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDpCOUQ0QkM2RjREQ0MxMUU3ODE5NkFEMkVCOThCOTQ2NCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDpCOUQ0QkM3MDREQ0MxMUU3ODE5NkFEMkVCOThCOTQ2NCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PiL8gcIAAAF1SURBVHja7Ju/LwRRFEbf+FVsQ0dBdJKNSksUSqVCr6AhKxGVwn+gVUpQEI1So5XoZUOhEbKMDiESIeOTzPbvzpoxz5wvOd3duzsn++7cSXajZMU9OOeGXPmTiHtxIU7FoYh/oe+ZmPKsjSMJS1yY+RS7YrNDcTdi1Le4y4WbHrEorsRcUW8asrB2BsSxWEeYLVtiCWG2bIsJhPmnV+zkeV3/TZhLv2HzCLNlFWG2TIqRvHYZa97FR84XXEvnUSeZEft/LexZDIvXnIVFop6uCQ3RnaHHeBmO5FMBstrPjZdiTUyLlww9Bqs6w87FcobX9Vd56B+IZoZjXVlhP0f0qAwfJKS1ookw+w0HYaEFYQVs+j4ZE7Oed6o3sVfA00OphW2IBUN9S5xU+Uhad6A+ZhhDnyAMYQhDGMIQRhCGMIQhDGEEYQhDGMIQhjCCMIQhDGEIIwhDWFHCLP81vPOsezT0/BK3nj0tP1i59qxrGXrG3wIMAK5yNsqRAjAyAAAAAElFTkSuQmCC"></div>
+                <div><span class="iconfont">&#xe707;</span>
+                    <p>搜索商品名称</p>
+                </div>
+                <div><i class="iconfont" style="font-size: .24rem;">&#xe734;</i></div>
+            </div class="headbox">
+            <!-- 顶栏目录行 -->
+            <div class="row2">
+                <ul>
+                    <li><span>推荐</span></li>
+                    <li>手机</li>
+                    <li>智能</li>
+                    <li>电视</li>
+                    <li>笔记本</li>
+                    <li>家电</li>
+                    <li><i class="iconfont" style="font-size: .24rem;">&#xe714;</i></li>
+                </ul>
+            </div class="headbox">
+        </div>
+    </header>
+    <main>
+        <!-- 轮播图图片-->
+        <div id="img">
+            <a href=""><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/241dcd985a1c3f29902d092c7e7b91ea.jpg?thumb=1&w=720&h=360" alt=""></a>
+        </div>
+        <!-- 中部十个目录-->
+        <div class="middle">
+            <ul>
+                <li>
+                    <a href=""> <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/cb65daec7ef7b52cc785f88f78efba37.png?thumb=1&w=144&h=152" alt=""></a>
+                </li>
+                <li>
+                    <a href=""><img src="https://i8.mifile.cn/v1/a1/eb5024fe-dfe3-6e53-3e18-675bef5fa06e.webp" alt=""></a>
+                </li>
+                <li>
+                    <a href=""><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/780602689f55569ed27edf86cda44d03.jpg?thumb=1&w=144&h=152" alt=""></a>
+                </li>
+                <li>
+                    <a href=""><img src="https://i8.mifile.cn/v1/a1/e8bc849a-0a3b-21a0-6810-7da3a3903dee.webp" alt=""></a>
+                </li>
+                <li>
+                    <a href=""><img src="https://i8.mifile.cn/v1/a1/7dbcbf87-6a58-adb6-2f3f-bb3dae3e9c80.webp" alt=""></a>
+                </li>
+                <li>
+                    <a href=""><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/bc1c677a6e10e42d00fb0a063662fbf9.png?thumb=1&w=144&h=152" alt=""></a>
+                </li>
+                <li>
+                    <a href=""><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/9ea68dee2bfa0e55a82236b0d968e975.png?thumb=1&w=144&h=152" alt=""></a>
+                </li>
+                <li>
+                    <a href=""><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/1b92680601206b48b885d883c23b83e2.png?thumb=1&w=144&h=152" alt=""></a>
+                </li>
+                <li>
+                    <a href=""><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/9425031cdd7af22d9a23a5ae16d1f57c.jpg?thumb=1&w=144&h=152" alt=""></a>
+                </li>
+                <li>
+                    <a href=""><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/f11f9df6b0b0b428f8c8fc3267131830.png?thumb=1&w=144&h=152" alt=""></a>
+                </li>
+            </ul>
+        </div>
+        <!-- 三个照片 -->
+        <div class="img3">
+
+            <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/32b5d24417b673008f386592c4d17046.jpg?thumb=1&w=358&h=508" alt="">
+            <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/4aea81c738383c9787b49c3d5e6a7ab0.jpg?thumb=1&w=358&h=252" alt="">
+            <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/267e988a99b5cf4e960747e8aa5fa831.jpg?thumb=1&w=358&h=252" alt="">
+
+        </div>
+        <!-- 下方四个菜单 -->
+        <div class="footer">
+            <a href="">
+                <i class="iconfont" style="font-size: .24rem;">&#xe666;</i><span>首页</span></a>
+            <a href=""><i class="iconfont" style="font-size: .24rem;">&#xe712;</i><span>分类</span></a>
+            <a href=""><i  class="iconfont" style="font-size: .24rem;">&#xe6ff;</i><span>购物车</span></a>
+            <a href=""><i  class="iconfont" style="font-size: .24rem;">&#xe711;</i><span>我的</span></a>
+        </div>
+    </main>
+</body>
+
+</html>

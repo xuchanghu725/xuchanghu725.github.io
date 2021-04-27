@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>JS Bin</title>
+    <style>
+        * {
+            background-color: rgba(0, 0, 0, 0.1);
+        }
+        
+        dl {
+            font-size: 0px;
+        }
+        
+        div {
+            width: 246px;
+        }
+        
+        dt {
+            font-size: 20px;
+            display: inline-block;
+            border: 1px solid;
+            width: 50px;
+            box-sizing: border-box;
+            margin-top: 10px;
+            margin-right: -1px;
+        }
+        
+        dd {
+            font-size: 20px;
+            display: inline-block;
+            border: 1px solid;
+            box-sizing: border-box;
+            width: 50px;
+            margin: 0px;
+            margin-top: 10px;
+            margin-right: -1px;
+        }
+        
+        dd::after {
+            content: ',';
+        }
+        
+        dd:nth-child(4n+6) {
+            margin-left: 50px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <dl>
+        <div>
+            <dt>dt</dt>
+            <dd>dd1</dd>
+            <dd>dd2</dd>
+            <dd>dd3</dd>
+            <dd>dd4</dd>
+            <dd>dd5</dd>
+            <dd>dd6</dd>
+            <dd>dd7</dd>
+            <dd>dd8</dd>
+            <dd>dd9</dd>
+            <dd>dd10</dd>
+            <dd>dd11</dd>
+        </div>
+        <div>
+            <dt>dt</dt>
+            <dd>dd1</dd>
+            <dd>dd2</dd>
+            <dd>dd3</dd>
+
+        </div>
+
+    </dl>
+
+
+
+</body>
+
+</html>

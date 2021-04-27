@@ -1,0 +1,214 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+/* 对主体进行设置 */
+
+html {
+    font-size: calc(10000vw / 500);
+}
+
+body {
+    font-size: 12px;
+    background-color: #f2f2f2;
+    position: relative;
+}
+
+header {
+    position: fixed;
+    z-index: 10;
+    background-color: #f2f2f2;
+}
+
+main {
+    position: absolute;
+    top: calc(170rem/100);
+}
+
+
+/* 顶栏广告 */
+
+#adimg {
+    width: calc(500rem/100);
+    height: calc(70rem/100);
+}
+
+#adimg img {
+    width: 100%;
+    height: 100%;
+}
+
+
+/* 顶栏搜索栏 */
+
+.row1 {
+    height: calc(60rem/100);
+    display: flex;
+    position: relative;
+}
+
+.row1 div:not(:nth-child(2)) {
+    width: calc(70rem/100);
+}
+
+.row1 div:nth-child(1) img {
+    display: block;
+    width: calc(36rem/100);
+    height: calc(22rem/100);
+    margin: calc(19rem/100) calc(17rem/100);
+}
+
+.row1 div:nth-child(2) {
+    flex-grow: 1;
+    height: calc(42rem/100);
+    border: 1px solid grey;
+    box-sizing: border-box;
+    vertical-align: middle;
+    background-color: #fff;
+    line-height: calc(42rem/100);
+    margin-top: calc(9rem/100);
+}
+
+.row1 div:nth-child(2) span {
+    display: inline-block;
+    height: calc(42rem/100);
+    width: calc(42rem/100);
+    line-height: calc(42rem/100);
+    text-align: center;
+}
+
+.row1 div:nth-child(2) p {
+    display: inline-block;
+    color: rgba(0, 0, 0, .3);
+    font-size: .22rem;
+}
+
+.row1 div:nth-child(3) i {
+    position: absolute;
+    top: 33%;
+    right: 4%;
+}
+
+
+/* 顶栏目录栏 */
+
+.row2 {
+    height: calc(40rem/100);
+    display: flex;
+}
+
+.row2 ul {
+    display: flex;
+    list-style: none;
+    height: 100%;
+}
+
+.row2 ul li {
+    float: left;
+    font-size: .18rem;
+    padding: 0 .18rem;
+    white-space: nowrap;
+    line-height: .40rem;
+    color: #999;
+}
+
+.row2 ul li:nth-of-type(1) span {
+    display: inline-block;
+    border-bottom: 2px solid rgba(237, 91, 0);
+    height: calc(100% - 2px);
+}
+
+
+/* 轮播图图片 */
+
+#img img {
+    width: 100%;
+    height: calc(250rem/100);
+}
+
+
+/* 中部十个目录 */
+
+.middle ul {
+    height: calc(210rem/100);
+    list-style: none;
+}
+
+.middle ul li {
+    float: left;
+    height: calc(105rem/100);
+    width: calc(100rem/100);
+}
+
+.middle ul li img {
+    height: calc(105rem/100);
+    width: calc(100rem/100);
+}
+
+
+/* 三个照片 */
+
+.img3 {
+    margin: calc(10rem/100) 0;
+    height: calc(350rem/100);
+    width: calc(500rem/100);
+    position: relative;
+}
+
+.img3 img {
+    height: calc(350rem/100);
+    width: calc(249rem/100);
+    position: absolute;
+}
+
+.img3 img:not(:nth-child(1)) {
+    height: calc(175rem/100);
+    width: calc(249rem/100);
+}
+
+.img3 img:nth-child(1) {
+    left: 0;
+    top: 0;
+}
+
+.img3 img:nth-child(2) {
+    right: 0;
+    top: 0;
+}
+
+.img3 img:nth-child(3) {
+    right: 0;
+    bottom: 0;
+}
+
+
+/* 下方四个菜单 */
+
+.footer {
+    width: 100%;
+    height: calc(53rem/100);
+    display: flex;
+    justify-content: space-between;
+    background-color: #fff;
+    position: fixed;
+    bottom: 0;
+}
+
+.footer a {
+    display: inline-block;
+    width: calc(120rem/100);
+    height: 100%;
+    position: relative;
+    text-align: center;
+    color: #999;
+}
+
+.footer a span {
+    position: absolute;
+    bottom: 0;
+    left: 38%;
+    color: #999;
+    font-size: .18rem;
+}

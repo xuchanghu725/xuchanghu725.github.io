@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+  <style>
+    
+.input-group{
+  border-collapse: separate ;
+  display: table;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.input-group-addon{
+  display: table-cell;
+  border:1px solid red;
+  border-right:none;
+  width: 1px; 
+  border-radius:5px 0 0 5px;
+}
+
+.form-control{
+ display: table-cell; 
+  width: 100%;
+  font: inherit;
+  border:1px solid red;
+  border-radius:0 5px 5px 0;
+}  
+  
+  </style>
+</head>
+<body>
+  
+<div class="input-group">
+  <span class="input-group-addon" id="basic-addon1">@5656</span>
+  <input type="text" class="form-control" placeholder="Username" aria-describedby="basic-addon1">
+</div>
+  
+</body>
+</html>

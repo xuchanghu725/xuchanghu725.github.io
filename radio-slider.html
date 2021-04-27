@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>JS Bin</title>
+    <style>
+        * {
+            background-color: rgba(0, 0, 0, 0.1);
+        }
+        
+        img {
+            width: 300px;
+            height: 300px;
+        }
+        
+        div.slider {
+            width: 300px;
+            height: 300px;
+            position: relative;
+            border: 5px solid;
+            overflow: hidden;
+        }
+        
+        main {
+            width: 1200px;
+            font-size: 0;
+            position: absolute;
+            left: 0;
+            top: 0;
+            transition: .3s;
+        }
+        
+        input {
+            display: none;
+        }
+        
+        #a:checked~main {
+            left: 0%;
+        }
+        
+        #b:checked~main {
+            left: -100%;
+        }
+        
+        #c:checked~main {
+            left: -200%;
+        }
+        
+        #d:checked~main {
+            left: -300%;
+        }
+        
+        x.bottom {
+            width: 100px;
+            height: 10px;
+            position: relative;
+            top: 90%;
+            left: 33%;
+            font-size: 0;
+            padding-left: 5px;
+            background-color: none;
+        }
+        
+        div.bottom label {
+            width: 10px;
+            height: 10px;
+            display: inline-block;
+            border-radius: 5px;
+            margin: 0 6px;
+            position: relative;
+            left: 33%;
+            top: 270px;
+        }
+        
+        div.left label {
+            width: 40px;
+            height: 40px;
+            left: 0px;
+            display: none;
+            top: 130px;
+            position: absolute;
+            border-radius: 0 30px 30px 0;
+            background-image: url(http://i1.mifile.cn/f/i/2014/cn/icon/icon-slides.png);
+            background-repeat: no-repeat;
+            background-position: -88px -15px;
+        }
+        
+        div.right label {
+            width: 40px;
+            height: 40px;
+            right: 0px;
+            display: none;
+            top: 130px;
+            position: absolute;
+            border-radius: 30px 0 0 30px;
+            background-image: url(http://i1.mifile.cn/f/i/2014/cn/icon/icon-slides.png);
+            background-repeat: no-repeat;
+            background-position: -122px -15px;
+        }
+        
+        #a:checked~.left .d,
+        #a:checked~.right .b {
+            display: block;
+        }
+        
+        #b:checked~.left .a,
+        #b:checked~.right .c {
+            display: block;
+        }
+        
+        #c:checked~.left .b,
+        #c:checked~.right .d {
+            display: block;
+        }
+        
+        #d:checked~.left .c,
+        #d:checked~.right .a {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="slider">
+
+        <input type="radio" name="a" id="a" checked>
+        <input type="radio" name="a" id="b">
+        <input type="radio" name="a" id="c">
+        <input type="radio" name="a" id="d">
+        <main id="qq">
+            <img class="a" src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/ef6b4e9b9151849b3b1fb1dbf069c6ed.jpg?thumb=1&w=200&h=200&f=webp&q=90" alt="">
+            <img class="a" src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/cd2aa2dcad6440b469c22e27db9b6236.jpg?thumb=1&w=200&h=200&f=webp&q=90" alt="">
+            <img class="a" src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/ec20453216dcd42f982cffe5fdbc3115.jpg?thumb=1&w=200&h=200&f=webp&q=90" alt="">
+            <img class="a" src="https://i8.mifile.cn/v1/a1/ef617fac-7489-436d-b74e-c43582f09633!200x200.jpg" alt="">
+        </main>
+        <div class="bottom">
+            <label for="a" class="a"></label>
+            <label for="b" class="b"></label>
+            <label for="c" class="c"></label>
+            <label for="d" class="d"></label>
+        </div>
+        <div class="left">
+            <label for="a" class="a"></label>
+            <label for="b" class="b"></label>
+            <label for="c" class="c"></label>
+            <label for="d" class="d"></label>
+        </div>
+        <div class="right">
+            <label for="a" class="a"></label>
+            <label for="b" class="b"></label>
+            <label for="c" class="c"></label>
+            <label for="d" class="d"></label>
+        </div>
+    </div>
+</body>
+
+</html>

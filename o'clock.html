@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>JS Bin</title>
+    <style>
+        /*  设置时钟框  */
+        
+        div {
+            width: 400px;
+            height: 400px;
+            border-radius: 9999px;
+            border: 5px solid;
+            position: relative;
+            box-shadow: 0 0 30px 15px grey inset;
+        }
+        /*  设置时钟里面的时间元素块  */
+        
+        span {
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+            position: absolute;
+            text-align: center;
+            line-height: 50px;
+            font-size: 30px;
+        }
+        /*  设置时钟里面的时间元素块的位置  */
+        
+        span:nth-child(1) {
+            transform: rotate(-60deg) translate(175px) rotate(60deg);
+        }
+        
+        span:nth-child(2) {
+            transform: rotate(-30deg) translate(175px) rotate(30deg);
+        }
+        
+        span:nth-child(3) {
+            transform: translate(175px);
+        }
+        
+        span:nth-child(4) {
+            transform: rotate(30deg) translate(175px) rotate(-30deg);
+        }
+        
+        span:nth-child(5) {
+            transform: rotate(60deg) translate(175px) rotate(-60deg);
+        }
+        
+        span:nth-child(6) {
+            transform: rotate(90deg) translate(175px) rotate(90deg);
+        }
+        
+        span:nth-child(7) {
+            transform: rotate(120deg) translate(175px) rotate(-120deg);
+        }
+        
+        span:nth-child(8) {
+            transform: rotate(150deg) translate(175px) rotate(-150deg);
+        }
+        
+        span:nth-child(9) {
+            transform: rotate(180deg) translate(175px) rotate(-180deg);
+        }
+        
+        span:nth-child(10) {
+            transform: rotate(210deg) translate(175px) rotate(-210deg);
+        }
+        
+        span:nth-child(11) {
+            transform: rotate(240deg) translate(175px) rotate(-240deg);
+        }
+        
+        span:nth-child(12) {
+            transform: rotate(-90deg) translate(175px) rotate(90deg);
+        }
+        /*  设置时钟里面的秒针  */
+        
+        .second {
+            display: inline-block;
+            width: 2px;
+            margin-left: -1px;
+            height: 200px;
+            transform-origin: 50% 160px;
+            position: absolute;
+            left: 50%;
+            top: 40px;
+            animation: foo 60s -20s infinite steps(60);
+        }
+        
+        .second:after {
+            content: '';
+            display: block;
+            transform-origin: 50% 160px;
+            background-color: black;
+            height: 100%;
+            width: 100%;
+            animation: fo 1s infinite cubic-bezier(0.4, 2.08, 0.55, 0.44);
+        }
+        
+        @keyframes fo {
+            from {
+                transform: rotate(0deg)
+            }
+            20%,
+            to {
+                transform: rotate(6deg)
+            }
+        }
+        
+        @keyframes foo {
+            from {
+                transform: rotate(0deg)
+            }
+            to {
+                transform: rotate(360deg)
+            }
+        }
+        /*  设置时钟里面的分针  */
+        
+        .minute {
+            display: inline-block;
+            width: 6px;
+            margin-left: -3px;
+            height: 140px;
+            transform-origin: 50% 110px;
+            position: absolute;
+            left: 50%;
+            top: 90px;
+            animation: too 3600s -40s infinite steps(60);
+        }
+        
+        .minute:after {
+            content: '';
+            display: block;
+            transform-origin: 50% 110px;
+            background-color: black;
+            height: 100%;
+            width: 100%;
+            animation: to 60s infinite cubic-bezier(0.4, 2.08, 0.55, 0.44);
+        }
+        
+        @keyframes to {
+            from {
+                transform: rotate(0deg)
+            }
+            0.334%,
+            to {
+                transform: rotate(6deg)
+            }
+        }
+        
+        @keyframes too {
+            from {
+                transform: rotate(0deg)
+            }
+            to {
+                transform: rotate(360deg)
+            }
+        }
+        /*  设置时钟里面的时针  */
+        
+        .hour {
+            display: inline-block;
+            width: 8px;
+            margin-left: -4px;
+            height: 100px;
+            transform-origin: 50% 70px;
+            background-color: red;
+            position: absolute;
+            left: 50%;
+            top: 130px;
+            animation: koo 43200s infinite linear;
+        }
+        
+        @keyframes koo {
+            from {
+                transform: rotate(0deg)
+            }
+            to {
+                transform: rotate(360deg)
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!--div是钟框-->>
+    <div>
+        <!--span是钟里面的12个时刻-->
+        <span>01</span>
+        <span>02</span>
+        <span>03</span>
+        <span>04</span>
+        <span>05</span>
+        <span>06</span>
+        <span>07</span>
+        <span>08</span>
+        <span>09</span>
+        <span>10</span>
+        <span>11</span>
+        <span>12</span>
+        <!--三个em分别是时针 分针 秒针-->
+        <em class="second"></em>
+        <em class="minute"></em>
+        <em class="hour"></em>
+    </div>
+</body>
+
+</html>

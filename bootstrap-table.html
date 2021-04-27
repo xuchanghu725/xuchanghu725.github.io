@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+  <style>
+ .table tr {
+  border-top:1px solid #DEE2E6;
+}
+
+.table{
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table thead tr{
+  border-bottom:2px solid #DEE2E6; 
+}
+
+.table td,
+.table th{
+  text-align: left;
+  padding: 10px;
+}
+
+.table-dark{
+  background-color: #343A40;
+  color: white;
+}
+
+.table.table-dark tr{
+  border-color:#454D55;
+}
+
+.thead-dark thead {
+  background-color: #343A40;
+  color:white;
+}
+
+.thead-light thead {
+  background-color: #E9ECEF;
+  color:#495057;
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+  background-color: #F2F2F2;
+}
+
+.table-striped.table-dark tbody tr:nth-of-type(odd) {
+  background-color: #3E444A;
+}
+
+.table-bordered th,
+.table-bordered td
+{
+  border: 1px solid #DEE2E6;
+}
+
+.table-bordered.table-dark th,
+.table-bordered.table-dark td {
+  border-color:#454D55;
+}
+
+.table-bordered.table-dark tbody>tr:first-child th,
+.table-bordered.table-dark tbody>tr:first-child td{
+  border-color:#454D55;
+}
+
+.table-borderless td,
+.table-borderless th{
+  border: hidden;
+}
+
+.table-hover tbody tr:hover{
+  background-color: #ECECEC;
+}
+
+.table-hover.table-dark tbody tr:hover{
+  background-color: #43494E;
+}
+
+.table-sm td,
+.table-sm th{
+  padding: 5px;
+}
+
+
+.table-active tr{
+  width: 100%;
+  border: 1px solid;
+}
+
+tr.no1{
+  background-color: #C3E6CB;
+  border-top:1px solid #DEE2E6;
+}
+tr.no2{
+  background-color: #DADADA;
+  border-top:1px solid #DEE2E6;
+}
+tr.no3{
+  background-color: #FFFFFF;
+  border-top:1px solid #DEE2E6;
+}
+tr.no4{
+  background-color: #B8DAFF;
+    border-top:1px solid #7ABAFF;
+}
+tr.no5{
+  background-color: #D6D8DB;
+  border-top:1px solid #B3B7BB;
+}
+tr.no6{
+  background-color: #F5C6CB;
+  border-top:1px solid #8FD19E;
+}
+tr.no7{
+  background-color: #FFEEBA;
+  border-top:1px solid #ED969E;
+}
+tr.no8{
+  background-color: #BEE5EB;
+  border-top:1px solid #FFDF7E;
+}
+tr.no9{
+  background-color: #F5C6CB;
+  border-top:1px solid #86CFDA;
+}
+tr.no10{
+  background-color: #FDFDFE;
+  border-top:1px solid #BEE5EB;
+}
+tr.no11{
+  background-color: #C6C8CA;
+  border-top:1px solid #454D55;
+}
+
+tr.no1:hover{
+  background-color: #f5efef;
+}
+tr.no2:hover{
+  background-color: #bcc9dc;
+}
+tr.no3:hover{
+  background-color: #f5efef;
+}
+tr.no4:hover{
+  background-color: #9ac8fb;
+}
+tr.no5:hover{
+  background-color: #bcc9dc;
+}
+tr.no6:hover{
+  background-color: #f3b7bd;
+}
+tr.no7:hover{
+  background-color: #ffe79e;
+}
+tr.no8:hover{
+  background-color: #afedf7;
+}
+tr.no9:hover{
+  background-color: #f5b2b9;
+}
+tr.no10:hover{
+  background-color: #f5efef;
+}
+tr.no11:hover{
+  background-color: #bcc9dc;
+}
+ 
+  </style>
+</head>
+<body>
+ 
+<h2>普通样式</h2>
+<table class="table ">
+  <thead class="">
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">First</th>
+      <th scope="col">Last</th>
+      <th scope="col">Handle</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td>Mark</td>
+      <td>Otto</td>
+      <td>@mdo</td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>Jacob</td>
+      <td>Thornton</td>
+      <td>@fat</td>
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td>Larry</td>
+      <td>the Bird</td>
+      <td>@twitter</td>
+    </tr>
+  </tbody>
+</table>
+  
+<h2>暗黑样式</h2>
+<table class="table table-dark">
+  <thead class="">
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">First</th>
+      <th scope="col">Last</th>
+      <th scope="col">Handle</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td>Mark</td>
+      <td>Otto</td>
+      <td>@mdo</td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>Jacob</td>
+      <td>Thornton</td>
+      <td>@fat</td>
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td>Larry</td>
+      <td>the Bird</td>
+      <td>@twitter</td>
+    </tr>
+  </tbody>
+</table> 
+   
+<h2>标题行暗黑样式</h2>
+<table class="table thead-dark">
+  <thead class="">
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">First</th>
+      <th scope="col">Last</th>
+      <th scope="col">Handle</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td>Mark</td>
+      <td>Otto</td>
+      <td>@mdo</td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>Jacob</td>
+      <td>Thornton</td>
+      <td>@fat</td>
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td>Larry</td>
+      <td>the Bird</td>
+      <td>@twitter</td>
+    </tr>
+  </tbody>
+</table> 
+  
+    
+<h2>标题行淡灰样式</h2>
+<table class="table thead-light">
+  <thead class="">
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">First</th>
+      <th scope="col">Last</th>
+      <th scope="col">Handle</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td>Mark</td>
+      <td>Otto</td>
+      <td>@mdo</td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>Jacob</td>
+      <td>Thornton</td>
+      <td>@fat</td>
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td>Larry</td>
+      <td>the Bird</td>
+      <td>@twitter</td>
+    </tr>
+  </tbody>
+</table> 
+  
+    
+<h2>斑马纹样式</h2>
+<table class="table table-striped">
+  <thead class="">
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">First</th>
+      <th scope="col">Last</th>
+      <th scope="col">Handle</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td>Mark</td>
+      <td>Otto</td>
+      <td>@mdo</td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>Jacob</td>
+      <td>Thornton</td>
+      <td>@fat</td>
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td>Larry</td>
+      <td>the Bird</td>
+      <td>@twitter</td>
+    </tr>
+  </tbody>
+</table> 
+  
+     
+<h2>暗黑斑马纹样式</h2>
+<table class="table table-striped table-dark">
+  <thead class="">
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">First</th>
+      <th scope="col">Last</th>
+      <th scope="col">Handle</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td>Mark</td>
+      <td>Otto</td>
+      <td>@mdo</td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>Jacob</td>
+      <td>Thornton</td>
+      <td>@fat</td>
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td>Larry</td>
+      <td>the Bird</td>
+      <td>@twitter</td>
+    </tr>
+  </tbody>
+</table> 
+  
+     
+<h2>边框线样式</h2>
+<table class="table table-bordered">
+  <thead class="">
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">First</th>
+      <th scope="col">Last</th>
+      <th scope="col">Handle</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td>Mark</td>
+      <td>Otto</td>
+      <td>@mdo</td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>Jacob</td>
+      <td>Thornton</td>
+      <td>@fat</td>
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td>Larry</td>
+      <td>the Bird</td>
+      <td>@twitter</td>
+    </tr>
+  </tbody>
+</table> 
+  
+     
+<h2>暗黑背景带边框线样式</h2>
+<table class="table table-bordered table-dark">
+  <thead class="">
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">First</th>
+      <th scope="col">Last</th>
+      <th scope="col">Handle</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td>Mark</td>
+      <td>Otto</td>
+      <td>@mdo</td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>Jacob</td>
+      <td>Thornton</td>
+      <td>@fat</td>
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td>Larry</td>
+      <td>the Bird</td>
+      <td>@twitter</td>
+    </tr>
+  </tbody>
+</table> 
+  
+      
+<h2>无边框线样式</h2>
+<table class="table table-borderless">
+  <thead class="">
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">First</th>
+      <th scope="col">Last</th>
+      <th scope="col">Handle</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td>Mark</td>
+      <td>Otto</td>
+      <td>@mdo</td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>Jacob</td>
+      <td>Thornton</td>
+      <td>@fat</td>
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td>Larry</td>
+      <td>the Bird</td>
+      <td>@twitter</td>
+    </tr>
+  </tbody>
+</table> 
+  
+      
+<h2>暗黑背景无边框线样式</h2>
+<table class="table table-borderless table-dark">
+  <thead class="">
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">First</th>
+      <th scope="col">Last</th>
+      <th scope="col">Handle</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td>Mark</td>
+      <td>Otto</td>
+      <td>@mdo</td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>Jacob</td>
+      <td>Thornton</td>
+      <td>@fat</td>
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td>Larry</td>
+      <td>the Bird</td>
+      <td>@twitter</td>
+    </tr>
+  </tbody>
+</table> 
+  
+       
+<h2>可悬浮普通样式</h2>
+<table class="table table-hover">
+  <thead class="">
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">First</th>
+      <th scope="col">Last</th>
+      <th scope="col">Handle</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td>Mark</td>
+      <td>Otto</td>
+      <td>@mdo</td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>Jacob</td>
+      <td>Thornton</td>
+      <td>@fat</td>
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td>Larry</td>
+      <td>the Bird</td>
+      <td>@twitter</td>
+    </tr>
+  </tbody>
+</table> 
+       
+       
+<h2>可悬浮暗黑背景样式</h2>
+<table class="table table-hover table-dark">
+  <thead class="">
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">First</th>
+      <th scope="col">Last</th>
+      <th scope="col">Handle</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td>Mark</td>
+      <td>Otto</td>
+      <td>@mdo</td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>Jacob</td>
+      <td>Thornton</td>
+      <td>@fat</td>
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td>Larry</td>
+      <td>the Bird</td>
+      <td>@twitter</td>
+    </tr>
+  </tbody>
+</table> 
+       
+       
+<h2>小号内边距样式</h2>
+<table class="table table-sm">
+  <thead class="">
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">First</th>
+      <th scope="col">Last</th>
+      <th scope="col">Handle</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td>Mark</td>
+      <td>Otto</td>
+      <td>@mdo</td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>Jacob</td>
+      <td>Thornton</td>
+      <td>@fat</td>
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td>Larry</td>
+      <td>the Bird</td>
+      <td>@twitter</td>
+    </tr>
+  </tbody>
+</table> 
+       
+       
+<h2>小号内边距暗黑背景样式</h2>
+<table class="table table-sm table-dark">
+  <thead class="">
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">First</th>
+      <th scope="col">Last</th>
+      <th scope="col">Handle</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td>Mark</td>
+      <td>Otto</td>
+      <td>@mdo</td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>Jacob</td>
+      <td>Thornton</td>
+      <td>@fat</td>
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td>Larry</td>
+      <td>the Bird</td>
+      <td>@twitter</td>
+    </tr>
+  </tbody>
+</table> 
+       
+       
+<h2>行背景颜色样式</h2>
+<table class="table">
+  <thead class="">
+    <tr class="no1">
+      <th scope="col">Class</th>
+      <th scope="col">Heading</th>
+      <th scope="col">Heading</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="no2">
+      <th scope="row">Active</th>
+      <td>Cell</td>
+      <td>Cell</td>
+    </tr>
+    <tr class="no3">
+      <th scope="row">Default</th>
+      <td>Cell</td>
+      <td>Cell</td>
+    </tr>
+    <tr class="no4">
+      <th scope="row">Primary</th>
+      <td>Cell</td>
+      <td>Cell</td>
+    </tr>
+    <tr class="no5">
+      <th scope="row">Secondary</th>
+      <td>Cell</td>
+      <td>Cell</td>
+    </tr>
+    <tr class="no6">
+      <th scope="row">Success</th>
+      <td>Cell</td>
+      <td>Cell</td>
+    </tr>
+    <tr class="no7">
+      <th scope="row">Danger</th>
+      <td>Cell</td>
+      <td>Cell</td>
+    </tr>
+    <tr class="no8">
+      <th scope="row">Warning</th>
+      <td>Cell</td>
+      <td>Cell</td>
+    </tr>
+    <tr class="no9">
+      <th scope="row">Info</th>
+      <td>Cell</td>
+      <td>Cell</td>
+    </tr>
+    <tr class="no10">
+      <th scope="row">Light</th>
+      <td>Cell</td>
+      <td>Cell</td>
+    </tr>
+    <tr class="no11">
+      <th scope="row">Dark</th>
+      <td>Cell</td>
+      <td>Cell</td>
+    </tr>
+  </tbody>
+</table> 
+  
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       var n = +prompt('请输入非负整数序列的长度');
+       var score = 0;
+       var high = 0;
+       var low = 0;
+       var box = 0;
+       for(i = 1; i <= n; i++){
+           score = Number(prompt('请输入第' + i + '个非负整数')) 
+           if(score > high){
+               high = score;//如果输入的值比原本的高值高就会赋值给高值。
+           } else {box = score};//输入的值比高值低就会放在box里面。
+           if(low => box){
+               low = box;//然后拿箱子里面的值和最低值比，箱子里面的值比low低就会，将box的值赋给low
+           }
+       }
+       console.log(high - low);
+    </script>
+</body>
+</html>

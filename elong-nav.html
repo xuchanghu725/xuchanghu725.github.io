@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+</head>
+  <style>
+  div {
+  margin: 0px;
+  padding: 0px;
+  background-color: #2064C8;
+}
+
+ul {
+  font-size:0;/*设置字号为0，直接给要设置的元素一个字号，可以消除两个元素之间的空格，*/
+  list-style:none;
+  width: 600px;
+  margin: auto;
+  margin-top:20px;
+}
+
+li{
+  display: inline-block;
+  color: white;
+  padding: 10px;
+  border-left: 1px solid #3774CE;  
+  position: relative;
+  font-size:16px;
+}
+
+li:last-child{
+  border-right: 1px solid #3774CE;   
+}
+
+li[data-tip]::before{
+  content:attr(data-tip);/*直接连接带有data-tip的属性，更方便使用，简化代码*/
+  background-color: #FF8E00;
+  font-size:12px;
+  position: absolute;
+  z-index:10;/*这内容比层叠的内容显示更靠近用户*/
+  left:70px;
+  bottom:34px;
+  white-space: nowrap;/*文本不进行换行*/
+}
+
+li[data-tip]::after{
+  content:'';
+  position: absolute;/*需要对他的父元素设置一个相对定位，因为这个是伪元素，他的父元素是li，需要给li设置一个raletive*/
+  z-index: 10;
+  border: 3px solid #FF8E00;
+  border-color: #FF8E00 transparent transparent #FF8E00;/*需要删除背景颜色，否则会出现第2、3块区域的透明不显示，显示的是背景颜色*/
+  left: 75px;
+  bottom: 28px;
+}</style>
+<body>
+
+  <div> 
+    <ul>
+      <li>首页</li>
+      <li>国内酒店</li>
+      <li data-tip="低价促">海外酒店</li>
+      <li data-tip="新升级">国内·国际机票</li>
+      <li>火车票</li>
+      <li>汽车票</li>
+      <li>商旅</li>
+    </ul>
+  </div>
+  
+  
+  
+</body>
+</html>

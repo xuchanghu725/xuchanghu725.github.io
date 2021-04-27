@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>JS Bin</title>
+    <style>
+        input {
+            display: none;
+        }
+        
+        label.w {
+            box-sizing: border-box;
+            border: 3px solid;
+            border-color: #CBC7CA;
+            width: 255px;
+            height: 150px;
+            display: inline-block;
+            border-radius: 75px;
+            position: relative;
+            transition: 0.5s;
+        }
+        
+        input.w:checked+label.w {
+            border: 3px solid;
+            border-color: #30F349;
+            background-color: #30F349;
+            border-width: 70px;
+        }
+        
+        label.w::before {
+            content: '';
+            width: 135px;
+            height: 135px;
+            display: inline-block;
+            box-shadow: 0 0 20px 0px #CFCFCF;
+            border-radius: 70px;
+            position: absolute;
+            top: 5px;
+            left: 5px;
+            transition: 0.5s;
+        }
+        
+        input.w:checked+label.w::before {
+            content: '';
+            box-shadow: 0 0 20px 0px #23BA38;
+            left: 45px;
+            background-color: #fff;
+            top: -63px;
+        }
+        
+        label.q {
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+            border: 5px solid;
+            border-radius: 50px;
+            position: relative;
+            transition: .3s;
+        }
+        
+        label.q::before {
+            content: '';
+            height: 0px;
+            width: 0px;
+            border: 0px solid;
+            border-radius: 50px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            margin: auto;
+            transition: .3s;
+        }
+        
+        input.q:checked+label.q {
+            border-color: #04BE5E;
+        }
+        
+        input.q:checked+label.q::before {
+            height: 0px;
+            width: 0px;
+            border: 15px solid #04BE5E;
+        }
+        
+        label.q::after {
+            content: 'Radio Button';
+            height: 50px;
+            position: absolute;
+            left: 60px;
+            font-size: 20px;
+            line-height: 50px;
+            white-space: nowrap;
+            padding-left: 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <input type="checkbox" id="aaa" class="w">
+    <label for="aaa" class="w"></label>
+    <br>
+    <input type="radio" name="a" id="aa" class="q">
+    <label for="aa" class="q"></label><br>
+    <input type="radio" name="a" id="bb" class="q">
+    <label for="bb" class="q"></label><br>
+    <input type="radio" name="a" id="cc" class="q">
+    <label for="cc" class="q"></label>
+
+
+</body>
+
+</html>

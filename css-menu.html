@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+  <style>
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}           
+
+li{
+  border:1px solid papayawhip;
+}
+
+ul.aa > li {
+  display: inline-block;
+}
+
+ul li {
+  padding: 10px;
+  background-color: #C4B7D7;
+  position: relative;
+  white-space: nowrap;   
+}
+ul ul{
+  position:absolute;
+  top:100%;
+  left:0;
+  display:none;
+}
+
+ul ul ul{
+  top: 0;
+  left: 100%; 
+}
+
+li:hover{
+    background-color: #C2BBCC;
+}
+
+li:hover > ul {
+  background-color: #C2BBCC;
+  display:block;
+}
+</style>
+</head>
+<body>
+
+<ul class="aa">
+  <li>文件</li>
+  <li>编辑</li>
+  <li>选择</li>
+  <li>查看
+    <ul>
+     <li>文件</li>
+     <li>编辑</li>
+     <li>选择
+          <ul>
+           <li>文件</li>
+           <li>编辑</li>
+           <li>选择</li>
+           <li>查看</li>
+          </ul>
+    </li>
+     <li>查看</li>
+    </ul>
+  </li>
+  <li>转到</li>
+  <li>退出
+      <ul>
+     <li>文件</li>
+     <li>编辑</li>
+     <li>选择</li>
+     <li>查看</li>
+    </ul></li>  
+</ul>
+  
+  
+  
+</body>
+</html>
